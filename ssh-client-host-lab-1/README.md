@@ -6,8 +6,8 @@ In this lab, I used two virtual machines, Windows Server 2025 and Linux Lite, to
 
 ## Environment
 
-- **Linux User**: oem
-- Windows User: AMTECH/Administrator
+- **Linux User**: `oem`
+- **Windows User**: `AMTECH/Administrator`
 - **VM 1:** Windows Server 2025 (SSH client)
 - **VM 2:** Linux Lite (SSH server and target)
 - **Network:** Both VMs on the same virtual network so they can reach each other
