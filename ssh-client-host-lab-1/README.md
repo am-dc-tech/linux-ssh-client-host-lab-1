@@ -95,7 +95,7 @@ Before using SSH, check that Windows can reach Linux Lite.
 
 2. Confirm you get replies.
 
-<img width="512" height="106" alt="image" src="https://github.com/user-attachments/assets/ef614cb2-841e-4eb0-9264-6ed6202b4119" /
+<img width="512" height="106" alt="4 window-ping-to-linux" src="https://github.com/user-attachments/assets/2db846ca-03eb-4478-bfb2-ddc385768b93" />
 
 
 > If the ping fails, check that both VMs are on the same virtual network and that the IP address is correct. A firewall can also block ping replies, so a failed ping is not always a network problem. Try the SSH connection anyway.
