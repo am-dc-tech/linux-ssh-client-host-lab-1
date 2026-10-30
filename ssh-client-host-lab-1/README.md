@@ -6,10 +6,12 @@ In this lab, I used two virtual machines, Windows Server 2025 and Linux Lite, to
 
 ## Environment
 
+- **Linux User**: oem
+- Windows User: AMTECH/Administrator
 - **VM 1:** Windows Server 2025 (SSH client)
 - **VM 2:** Linux Lite (SSH server and target)
 - **Network:** Both VMs on the same virtual network so they can reach each other
-- **Tools:** `ipconfig`, `ip a`, `ssh`, `nano`, `ls`, `find`, `cat`
+
 
 ## Lab Outline
 
@@ -114,21 +116,23 @@ Before using SSH, check that Windows can reach Linux Lite.
 3. Enter the Linux Lite user's password when prompted.
 4. The prompt changes to the Linux Lite shell, which confirms the connection worked.
 
-![Successful SSH connection to Linux Lite](images/05-ssh-connected.png)
+<img width="564" height="174" alt="ssh-success-win-to-lin" src="https://github.com/user-attachments/assets/9f394b20-5151-4cea-8647-ffab051265a2" />
+
 
 ## Step 5: Create a Text File with nano
 
 1. In the SSH session, run:
 
    ```bash
-   nano labfile.txt
+   nano sshlabfile.txt
    ```
 
 2. Type some text, for example: `This file was created from Windows Server 2025 over SSH.`
 3. Press **Ctrl + O**, then **Enter** to save.
 4. Press **Ctrl + X** to exit nano.
 
-![Creating the file in nano](images/06-nano-file.png)
+<img width="524" height="153" alt="creating-nano-file" src="https://github.com/user-attachments/assets/c5696e83-c763-4727-82d5-cf2c358ef419" />
+
 
 ## Step 6: Confirm the File in the SSH Session
 
@@ -138,9 +142,11 @@ Before using SSH, check that Windows can reach Linux Lite.
    ls
    ```
 
-2. Confirm `labfile.txt` appears in the list.
+2. Confirm `sshlabfile.txt` appears in the list.
 
-![labfile.txt listed over SSH](images/07-ls-over-ssh.png)
+<img width="813" height="114" alt="confirm-txt-file-exist" src="https://github.com/user-attachments/assets/9457dcc8-0052-488a-8f2d-414476448c1c" />
+
+
 
 ## Step 7: Find the File on Linux Lite
 
@@ -153,12 +159,6 @@ Now check from the Linux Lite machine itself to prove the file was saved there a
    ls
    ```
 
-   or search for it:
-
-   ```bash
-   find ~ -name labfile.txt
-   ```
-
 3. Open it to check the contents:
 
    ```bash
@@ -167,7 +167,8 @@ Now check from the Linux Lite machine itself to prove the file was saved there a
 
 4. Confirm the text matches what you typed over SSH.
 
-![labfile.txt found on Linux Lite](images/08-file-on-linux.png)
+
+<img width="644" height="249" alt="cat-sshlabfile" src="https://github.com/user-attachments/assets/7aef636f-b7f1-45ec-b330-0cbbe1dcba5e" />
 
 ## Step 8: Close the Connection
 
@@ -192,17 +193,6 @@ Now check from the Linux Lite machine itself to prove the file was saved there a
 | File created | `labfile.txt` created with nano over SSH |
 | File located | Found on Linux Lite with `ls` and `find` |
 | Contents verified | Matched what was typed over SSH |
-
----
-
-## Troubleshooting Notes
-
-| Problem | Likely cause | Fix |
-|---|---|---|
-| `Connection refused` | SSH server not installed or not running on Linux Lite | Install `openssh-server` and run `sudo systemctl enable --now ssh` |
-| `Connection timed out` | VMs on different networks, wrong IP, or a firewall | Check the virtual network setting, confirm the IP, and check the firewall |
-| `Permission denied` | Wrong username or password | Confirm the Linux Lite username and password |
-| `ssh` not recognized | OpenSSH client not available on Windows | Enable the OpenSSH Client optional feature |
 
 ---
 
