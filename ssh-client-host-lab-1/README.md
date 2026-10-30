@@ -200,13 +200,9 @@ Now check from the Linux Lite machine itself to prove the file was saved there a
 
 - How to find IP addresses on both Windows (`ipconfig`) and Linux (`ip a`), which is the first step in almost any remote support task.
 - How SSH lets me control one machine from another through a command-line session, and that Windows has a built-in SSH client.
-- That the SSH server must be installed and running on the target before a connection works.
 - How to create, save, and exit a file in nano.
 - That files created in a remote session are saved on the remote machine, not the one I am typing from, and that I can prove it by finding the file on Linux Lite.
 - Basic Linux navigation and file searching with `ls`, `find`, and `cat`.
 - That remote access lets a help desk technician fix issues on machines in other locations without being physically there.
 
-## Tools Used
-
-Windows Server 2025, Linux Lite, OpenSSH, PowerShell, nano, `ipconfig`, `ip a`, `ping`, `ls`, `find`, `cat`
 
