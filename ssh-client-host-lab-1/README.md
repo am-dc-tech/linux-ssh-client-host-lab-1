@@ -43,9 +43,11 @@ In this lab, I used two virtual machines, Windows Server 2025 and Linux Lite, to
 
    Look for `active (running)`. Press `q` to exit the status screen.
 
-![SSH service running on Linux Lite](images/01-ssh-service-running.png)
+<img width="795" height="614" alt="1 install-ssh-linux" src="https://github.com/user-attachments/assets/6d30e33f-330b-4b0d-ab63-0e12900b1c65" />
 
-> [!NOTE]
+
+5. Windows SSH
+   
 > Windows Server 2025 includes an SSH client, so nothing needs to be installed on the Windows side. The SSH server must be running on the target machine, otherwise the connection will be refused.
 
 ---
