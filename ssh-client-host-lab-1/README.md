@@ -57,13 +57,12 @@ In this lab, I used two virtual machines, Windows Server 2025 and Linux Lite, to
 1. On Windows Server 2025, open **PowerShell** or **Command Prompt**.
 2. Run:
 
-   ```
+   ```command prompt
    ipconfig
    ```
-
 3. Find the **IPv4 Address** under the active network adapter and write it down.
 
-![ipconfig output on Windows Server 2025](images/02-windows-ipconfig.png)
+<img width="615" height="238" alt="2 ipconfig" src="https://github.com/user-attachments/assets/484002a4-5e22-4497-a20f-3e51e29df099" />
 
 ## Step 2: Find the IP Address of Linux Lite
 
@@ -82,7 +81,7 @@ In this lab, I used two virtual machines, Windows Server 2025 and Linux Lite, to
 
 3. Find the IPv4 address on the main interface (often `eth0` or `enp0s3`) and write it down.
 
-![ip a output on Linux Lite](images/03-linux-ip.png)
+<img width="895" height="316" alt="3 linus-lite-ip" src="https://github.com/user-attachments/assets/59ac238c-71fd-4dc3-beb7-fc5afc0a0013" />
 
 ## Step 3: Test the Connection
 
@@ -96,9 +95,9 @@ Before using SSH, check that Windows can reach Linux Lite.
 
 2. Confirm you get replies.
 
-![Successful ping to Linux Lite](images/04-ping.png)
+<img width="512" height="106" alt="image" src="https://github.com/user-attachments/assets/ef614cb2-841e-4eb0-9264-6ed6202b4119" /
 
-> [!TIP]
+
 > If the ping fails, check that both VMs are on the same virtual network and that the IP address is correct. A firewall can also block ping replies, so a failed ping is not always a network problem. Try the SSH connection anyway.
 
 ## Step 4: Connect with SSH
